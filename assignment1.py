@@ -32,7 +32,7 @@ for i in range(0, len(test_data)):
         prob_dict[label] = np.log(prior) + np.nansum(np.log(pdf))
     prediction.append(max(prob_dict, key = prob_dict.get))
     
- correct = 0
+correct = 0
 for i in range(len(test_data)):
     if test_data.iloc[i,0] == prediction[i]:
         correct += 1
